@@ -1,157 +1,96 @@
 <!doctype html>
 <html lang="en">
-  <head>
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jing's Homepage</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jing Ye — Ph.D. candidate in mathematics at Texas A&M University.">
+  <title>Jing Ye | Mathematics</title>
+  <style>
+    :root { --ink:#17253d; --muted:#64748b; --blue:#2457a6; --line:#dbe4ef; --paper:#f7f9fc; --card:#fff; --accent:#d89b4a; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.75 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:var(--blue); text-decoration:none; border-bottom:1px solid transparent; }
+    a:hover { border-bottom-color:var(--blue); }
+    .layout { display:grid; grid-template-columns:300px minmax(0,820px); gap:72px; max-width:1220px; margin:auto; padding:72px 42px; }
+    aside { position:sticky; top:36px; align-self:start; }
+    .monogram { display:grid; place-items:center; width:72px; height:72px; margin-bottom:24px; border-radius:20px; color:#fff; background:var(--ink); font:700 25px/1 Georgia,serif; letter-spacing:.04em; }
+    h1,h2,h3 { font-family:Georgia,"Times New Roman",serif; font-weight:600; line-height:1.2; }
+    h1 { margin:0; font-size:2.45rem; letter-spacing:-.04em; }
+    .role { margin:12px 0 30px; color:var(--muted); line-height:1.55; }
+    .nav { display:flex; flex-direction:column; gap:7px; margin:0 0 34px; padding-left:16px; border-left:2px solid var(--line); }
+    .nav a { color:var(--muted); }
+    .nav a:hover { color:var(--blue); }
+    .contact { padding-top:23px; border-top:1px solid var(--line); color:var(--muted); font-size:.92rem; line-height:1.65; }
+    .contact strong { display:block; margin-bottom:6px; color:var(--ink); font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; }
+    main { min-width:0; }
+    .eyebrow { margin:0 0 16px; color:var(--accent); font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    .intro { max-width:730px; margin:0 0 42px; font:1.35rem/1.65 Georgia,"Times New Roman",serif; }
+    section { padding:42px 0; border-top:1px solid var(--line); }
+    h2 { margin:0 0 22px; font-size:1.75rem; }
+    .section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:24px; }
+    .section-heading .eyebrow { margin:0 0 22px; }
+    .research-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .research-card { padding:22px; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 24px rgba(23,37,61,.04); }
+    .research-card h3 { margin:0 0 8px; font-size:1.1rem; color:var(--blue); }
+    .research-card p { margin:0; color:var(--muted); font-size:.95rem; line-height:1.6; }
+    .bio p { margin:0 0 14px; color:#40516b; }
+    .publication { padding:0 0 24px 22px; border-left:3px solid var(--line); }
+    .publication + .publication { margin-top:24px; }
+    .publication:hover { border-left-color:var(--accent); }
+    .publication h3 { margin:0 0 6px; font-size:1.05rem; }
+    .publication p { margin:0; color:var(--muted); font-size:.94rem; }
+    .tag { display:inline-block; margin-top:9px; padding:2px 9px; border-radius:20px; background:#eaf1fb; color:var(--blue); font-size:.78rem; }
+    footer { padding-top:24px; color:var(--muted); font-size:.85rem; }
+    @media (max-width:760px) { .layout { display:block; padding:42px 24px; } aside { position:static; margin-bottom:52px; } .nav { flex-direction:row; flex-wrap:wrap; gap:10px 22px; padding:0 0 18px; border-left:0; border-bottom:1px solid var(--line); } .section-heading { display:block; } .research-grid { grid-template-columns:1fr; } .intro { font-size:1.16rem; } }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <div class="monogram">JY</div>
+      <h1>Jing Ye</h1>
+      <p class="role">Ph.D. Candidate<br>Department of Mathematics<br>Texas A&amp;M University</p>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a>
+      </nav>
+      <div class="contact">
+        <strong>Contact</strong>
+        Blocker Building 641K<br>Department of Mathematics<br>Texas A&amp;M University<br>College Station, TX 77843-3368<br>United States
+        <p><a href="mailto:yej@tamu.edu">yej@tamu.edu</a></p>
+      </div>
+    </aside>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-29643011-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <!-- For all browsers -->
-    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
-
-    <style>
-      button.accordion {
-      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color: #f8f8f8;
-      }
-      button.accordion.active, button.accordion:hover {
-      background-color: #f8f8f8;
-      }
-      button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
-      }
-
-      button.accordion.active:after {
-      content: " [\2212] ";
-      }
-      div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: white;
-      font-size: 100%;
-      }
-      div.panel.show {
-      display: block !important;
-      }
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Ye, Jing </h1>
-        
-        <p>Ph.D. candidate in Department of Mathematics<br>Texas A&M University</p>
-       
-        
-    <!--<h3><a href="https://yej323.github.io/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://yej323.github.io/research.html">Research</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://yej323.github.io/Resources/cv_tamu.pdf">CV</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://yej323.github.io/resources.html">Resources</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://yej323.github.io/teaching.html">Teaching</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://yej323.github.io/personal.html">Personal</a></h3>
-       
-       <!-- <h3><a href="https://yej323.github.io/code.html">Code</a></h3> -->
-      
-    <br>
-
-    <p><b>Contact:</b><br>Blocker Building 641K<br>Department of Mathematics<br>Texas A&M University<br>College Station, TX 77843-3368<br>United States of America</p>
-    <b>Email:</b>
-        <br>
-        <div class="social-row">
-          <a href="mailto:yej@tamu.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i>yej@tamu.edu</a><br>
-        </div>
-        <br>
-      </header>
-      <br>
-      <section>
-      
-     
-      
-      <p>I'm currently a Ph.D. candidate in <a href="http://www.math.tamu.edu">Department of Mathematics</a> at <a href="http://www.tamu.edu/">Texas A&M University</a>, working under the supervision of <a href="https://sites.google.com/tamu.edu/papanikolas/">Dr. Matthew Papanikolas.</a></p>
-       <p>I obtained my bachelor's degree in <a href="http://math.sustech.edu.cn">Department of Mathematics</a> at <a href="http://www.sustech.edu.cn">Southern University of Science and Technology (南方科技大学)</a>.</p>
-     <p>
-My research lies in number theory and arithmetic geometry, with a particular emphasis on the arithmetic of function fields. In my recent work, I use Anderson modules, shtukas, and Anderson motives to study twisted Goss <i>L</i>-functions, their special values, and related questions in transcendence theory.
-</p>
-
-<p>My current research interests include:</p>
-
-<ul>
-  <li>
-    <strong>Motives:</strong> Anderson motives over function fields and 1-motives, Nori motives over number fields;
-  </li>
-  <li>
-    <strong>Periods and transcendence:</strong> periods, including special <i>L</i>-values, MZVs, transcendence and algebraic independence, and their motivic interpretations;
-  </li>
-  <li>
-    <strong>Modular forms:</strong> classical modular forms, Drinfeld modular forms, and Drinfeld modular varieties;
-  </li>
-  <li>
-    <strong>Iwasawa theory:</strong> particularly its analogues over global function fields.
-  </li>
-</ul>
-   
-      
-    <hr> 
-<h3>Publications and Preprints</h3>
-<ul>
-  <li>
-    <strong>On the transcendence of twisted special L-values at non-negative integers in characteristic p</strong>, 
-    <em>Preprint, 2026. Submitted for publication, 31 pages.</em> [<a href="https://arxiv.org/abs/2607.26416">arXiv</a>] 
-  </li>
-
-  
-  <li>
-    <strong>Artin twists of Drinfeld modules and Goss L-series</strong>, 
-    <em>Preprint, 2026. Submitted for publication, 63 pages.</em> [<a href="https://arxiv.org/abs/2602.04211v2">arXiv</a>] 
-  </li>
-
-  <li>
-    <strong>Weil polynomials of abelian varieties over finite fields (with M. Cerchia, Z. Liu, D. Mocanu, H. Yao)</strong>, 
-    <em>Preprint, 2025. Submitted for publication, 15 pages.</em> [<a href="https://arxiv.org/abs/2506.13706">arXiv</a>]
-  </li>
-</ul>
-      
-      
-      
-      
-      
-      
+    <main>
+      <section id="about" style="border-top:0;padding-top:0" class="bio">
+        <p>I am currently a Ph.D. candidate in the <a href="http://www.math.tamu.edu">Department of Mathematics</a> at <a href="http://www.tamu.edu">Texas A&amp;M University</a>, working under the supervision of <a href="https://sites.google.com/tamu.edu/papanikolas/">Matthew Papanikolas</a>. I obtained my bachelor's degree from the <a href="http://math.sustech.edu.cn">Department of Mathematics</a> at <a href="http://www.sustech.edu.cn">Southern University of Science and Technology</a>.</p>
       </section>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    <header>
-  <p></p>
-     </header>
-      
-  </body>
+
+      <section id="research">
+        <div class="section-heading">
+          <h2>Research interests</h2>
+          <p class="eyebrow">Number theory · Arithmetic geometry</p>
+        </div>
+        <div class="bio">
+          <p class="intro">My research lies in number theory and arithmetic geometry, with a particular emphasis on the arithmetic of function fields.</p>
+          <p>In my recent work, I use Anderson modules, shtukas, and Anderson motives to study twisted Goss <i>L</i>-functions, their special values, and related questions in transcendence theory.</p>
+        </div>
+        <div class="research-grid">
+          <article class="research-card"><h3>Motives</h3><p>Anderson motives over function fields and 1-motives; Nori motives over number fields.</p></article>
+          <article class="research-card"><h3>Periods &amp; transcendence</h3><p>Special <i>L</i>-values, MZVs, transcendence, algebraic independence, and motivic interpretations.</p></article>
+          <article class="research-card"><h3>Modular forms</h3><p>Classical modular forms, Drinfeld modular forms, and Drinfeld modular varieties.</p></article>
+          <article class="research-card"><h3>Iwasawa theory</h3><p>Analogues of Iwasawa theory over global function fields.</p></article>
+        </div>
+      </section>
+
+      <section id="publications">
+        <h2>Publications &amp; preprints</h2>
+        <article class="publication"><h3>On the transcendence of twisted special L-values at non-negative integers in characteristic p</h3><p><em>Preprint, 2026. Submitted for publication, 31 pages.</em></p><a class="tag" href="https://arxiv.org/abs/2607.26416">arXiv</a></article>
+        <article class="publication"><h3>Artin twists of Drinfeld modules and Goss L-series</h3><p><em>Preprint, 2026. Submitted for publication, 63 pages.</em></p><a class="tag" href="https://arxiv.org/abs/2602.04211v2">arXiv</a></article>
+        <article class="publication"><h3>Weil polynomials of abelian varieties over finite fields</h3><p><em>with M. Cerchia, Z. Liu, D. Mocanu, H. Yao · Preprint, 2025. Submitted for publication, 15 pages.</em></p><a class="tag" href="https://arxiv.org/abs/2506.13706">arXiv</a></article>
+      </section>
+      <footer>© Jing Ye · Last updated 2026</footer>
+    </main>
+  </div>
+</body>
 </html>
