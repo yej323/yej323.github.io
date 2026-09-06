@@ -15,6 +15,14 @@
     .layout { display:grid; grid-template-columns:300px minmax(0,820px); gap:72px; max-width:1220px; margin:auto; padding:72px 42px; }
     aside { position:sticky; top:36px; align-self:start; }
     .monogram { display:grid; place-items:center; width:72px; height:72px; margin-bottom:24px; border-radius:20px; color:#fff; background:var(--ink); font:700 25px/1 Georgia,serif; letter-spacing:.04em; }
+    .profile-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 24px;
+  }
     h1,h2,h3 { font-family:Georgia,"Times New Roman",serif; font-weight:600; line-height:1.2; }
     h1 { margin:0; font-size:2.45rem; letter-spacing:-.04em; }
     .role { margin:12px 0 30px; color:var(--muted); line-height:1.55; }
@@ -48,7 +56,7 @@
 <body>
   <div class="layout">
     <aside>
-      <div class="monogram">JY</div>
+      <img src="IMG_9228.jpg" alt="Jing Ye" class="profile-photo">
       <h1>Jing Ye / 叶靖</h1>
       <p class="role">Ph.D. Candidate<br>Department of Mathematics<br>Texas A&amp;M University</p>
       <nav class="nav" aria-label="Main navigation">
